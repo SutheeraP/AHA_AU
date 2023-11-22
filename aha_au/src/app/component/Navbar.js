@@ -14,14 +14,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 z-10  sm:mt-4 w-full">
-        <div className="container bg-secondary-200 backdrop-blur-sm mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-lg">
-          <div className="flex items-center justify-between h-12">
+      <nav className="fixed top-0 z-10 sm:mt-4 w-full">
+        <div className="container bg-secondary-200 backdrop-blur-sm mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-lg shadow-md md:shadow-lg shadow-emerald-500/20 md:shadow-slate-900/30">
+          <div className="flex items-center justify-between h-12 text-xs">
             
             {/* logo part */}
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <Link href="/" className="">
+                <Link href="/" className="font-bold text-base">
                   LOGO
                 </Link>
               </div>
