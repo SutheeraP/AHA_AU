@@ -101,7 +101,7 @@ export default function page() {
   const content = (
     <div className="mb-24 md:mb-0">
       <div className="flex flex-col gap-4">
-        <div className="text-xl">About</div>
+        <div className="text-xl font-semibold tracking-wide">About</div>
         <hr />
         <div className="flex flex-col gap-4 text-sm font-light">
           <div>
@@ -128,7 +128,7 @@ export default function page() {
       </div>
 
       <div className="flex flex-col gap-4 mt-36">
-        <div className="text-xl">Level</div>
+        <div className="text-xl font-semibold tracking-wide">Level</div>
         <hr />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-24 mt-12 text-sm font-light">
@@ -144,12 +144,12 @@ export default function page() {
       </div>
 
       <div className="flex flex-col gap-4 mt-36">
-        <div className="text-xl">ETC</div>
+        <div className="text-xl font-semibold tracking-wide">ETC</div>
         <hr/>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-24 mt-12 text-sm font-light">
           {cardETC.map(({ label, content }) => (
             <div key={label}>
-              <div className="font-normal text-base w-fit border-b border-primary mb-3">{label}</div>
+              <div className="font-semibold w-fit border-b border-primary mb-4">{label}</div>
               {content}
             </div>
           ))}

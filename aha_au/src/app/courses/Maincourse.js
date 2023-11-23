@@ -29,7 +29,7 @@ const Maincourse = ({content}) => {
 
       {/* content */}
       <div className={kanit.className}>
-        <div className="relative pt-24 container mx-auto px-4">
+        <div className="relative pt-24 pb-24 md:pb-0 container mx-auto px-4">
           <div className="md:grid md:grid-cols-12">
             <div className="hidden md:grid md:col-span-2">
               <Navcourse />
