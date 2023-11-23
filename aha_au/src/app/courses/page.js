@@ -101,7 +101,7 @@ export default function page() {
   const content = (
     <div className="mb-24">
       <div className="flex flex-col gap-4">
-        <div className="text-lg">About</div>
+        <div className="text-xl">About</div>
         <hr />
         <div className="flex flex-col gap-4 text-sm font-light">
           <div>
@@ -128,7 +128,7 @@ export default function page() {
       </div>
 
       <div className="flex flex-col gap-4 mt-36">
-        <div className="text-lg">Level</div>
+        <div className="text-xl">Level</div>
         <hr />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-24 mt-12 text-sm font-light">
@@ -144,7 +144,7 @@ export default function page() {
       </div>
 
       <div className="flex flex-col gap-4 mt-36">
-        <div className="text-lg">ETC</div>
+        <div className="text-xl">ETC</div>
         <hr/>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-24 mt-12 text-sm font-light">
           {cardETC.map(({ label, content }) => (
