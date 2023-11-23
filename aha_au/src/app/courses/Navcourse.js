@@ -131,7 +131,7 @@ const Navcourse = () => {
       {/* pc nav course */}
       <div className={kanit.className}>
         <div className="hidden md:block">
-          <div className="flex flex-col text-faded font-light text-sm lg:text-base z-20">
+          <div className="flex flex-col text-faded font-light text-sm lg:text-base z-20 fixed top-24">
             {navLink.map(({ id, link, icon, label }) => (
               <Link
                 key={id}
