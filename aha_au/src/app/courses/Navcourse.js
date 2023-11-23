@@ -3,6 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Kanit } from "@next/font/google";
+const kanit = Kanit({
+  subsets: ["latin", "thai"],
+  weight: ["300", "400", "600", "700"],
+});
 
 const Navcourse = () => {
   const path = usePathname();
@@ -10,7 +15,7 @@ const Navcourse = () => {
     {
       id: "level",
       link: "/courses",
-      label: "leeeevel",
+      label: "ระดับชั้น",
       icon: (
         <svg
           width="27"
@@ -108,14 +113,42 @@ const Navcourse = () => {
   ];
   return (
     <>
-      <div className="md:hidden fixed bottom-0 z-10 w-full">
+      {/* mobile */}
+      <div className="md:hidden fixed bottom-0 w-full">
         <div className="bg-whitesecondary-200 backdrop-blur-sm px-4 pb-10">
           <div className="flex items-center container ">
             {navLink.map(({ id, link, icon }) => (
               <Link key={id} href={link} className="py-8 flex-auto">
                 <div className="flex justify-center">
+                  <div className="w-min">{icon}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* pc nav course */}
+      <div className={kanit.className}>
+        <div className="hidden md:block">
+          <div className="flex flex-col text-faded font-light text-sm lg:text-base z-20">
+            {navLink.map(({ id, link, icon, label }) => (
+              <Link
+                key={id}
+                href={link}
+                className="grid grid-cols-5 gap-5 pb-5"
+              >
+                <div className="col-span-1">
+                  <div className="flex justify-center">
                     <div className="w-min">{icon}</div>
-                    
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    path === link ? "text-primary font-semibold" : ""
+                  } col-span-4`}
+                >
+                  {label}
                 </div>
               </Link>
             ))}

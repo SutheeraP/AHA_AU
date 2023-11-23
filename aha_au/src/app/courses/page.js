@@ -1,19 +1,21 @@
-import React from 'react'
-import Navbar from '../component/Navbar'
-import GreenBlur from '../component/GreenBlur'
-import Navcourse from './Navcourse'
+import React from "react";
+import Maincourse from "./Maincourse";
 
 export default function page() {
+  const content = (
+    <div className="grid md:grid-cols-2">
+      <div> level </div>
+      <div> card2 </div>
+      <div> card3 </div>
+      <div> card3 </div>
+      <div> card3 </div>
+      <div> card3 </div>
+    </div>
+  );
+  
   return (
-    <main className="bg-secondary-400 text-white h-[2000px] w-full">
-      <div className='absolute left-[-200px] top-[-200px]'>
-        <GreenBlur/>
-      </div>
-      <Navbar/>
-      <Navcourse />
-      <div className='pt-60 container mx-auto px-4'>
-        <div className='text-6xl'>Courses</div>
-      </div>
-    </main>
-  )
+    <>
+      <Maincourse content={content}/>
+    </>
+  );
 }
