@@ -109,7 +109,7 @@ const Navcourse = () => {
   return (
     <>
       <div className="md:hidden fixed bottom-0 z-10 w-full">
-        <div className="container bg-whitesecondary-200 backdrop-blur-sm mx-auto px-16">
+        <div className="container bg-whitesecondary-200 backdrop-blur-sm mx-auto px-8 pb-10">
           <div className="flex items-center justify-between h-16">
             {navLink.map(({ id, link, label, icon }) => (
               <Link key={id} href={link}>

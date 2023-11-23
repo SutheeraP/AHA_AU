@@ -16,6 +16,10 @@ const Navbar = () => {
 
   const navLink = [
     {
+      id: "Home",
+      link: "/",
+    },
+    {
       id: "Courses",
       link: "/courses",
     },
@@ -60,7 +64,7 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-4 item-center space-x-4">
                 {navLink
-                  .filter((item, index) => index < 5)
+                  .filter((item, index) => index < 6 && index > 0)
                   .map(({ id, link }) => (
                     <Link
                       key={id}
@@ -78,7 +82,7 @@ const Navbar = () => {
             {/* pc join right */}
             <div className="hidden md:block">
               {navLink
-                .filter((item, index) => index == 5)
+                .filter((item, index) => index == 6)
                 .map(({ id, link }) => (
                   <Link
                     key={id}
