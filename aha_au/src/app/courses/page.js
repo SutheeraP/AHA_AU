@@ -99,7 +99,7 @@ export default function page() {
   ];
 
   const content = (
-    <div className="mb-24">
+    <div className="mb-24 md:mb-0">
       <div className="flex flex-col gap-4">
         <div className="text-xl">About</div>
         <hr />

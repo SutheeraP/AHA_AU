@@ -15,10 +15,10 @@ const Maincourse = ({content}) => {
       <div className="absolute left-[-200px] top-[-200px]">
         <GreenBlur />
       </div>
-      <div className="absolute left-[-200px] md:left-[0px] top-[1500px]">
+      <div className="absolute left-[-200px] top-[1500px]">
         <GreenBlur />
       </div>
-      <div className="absolute right-[-200px] md:right-[0px] top-[900px]">
+      <div className="absolute right-[-200px] md:right-[0px] top-[800px]">
         <GreenBlur />
       </div>
       <Navbar />
@@ -29,7 +29,7 @@ const Maincourse = ({content}) => {
 
       {/* content */}
       <div className={kanit.className}>
-        <div className="relative py-24 container mx-auto px-4">
+        <div className="relative pt-24 container mx-auto px-4">
           <div className="md:grid md:grid-cols-12">
             <div className="hidden md:grid md:col-span-2">
               <Navcourse />

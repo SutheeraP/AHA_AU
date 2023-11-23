@@ -7,7 +7,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const path = usePathname();
+  const path1 = usePathname().split("/");
+  const path = "/" + path1[1];
   const [isClick, setisClick] = useState(false);
 
   const toggleNav = () => {
