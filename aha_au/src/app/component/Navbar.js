@@ -4,18 +4,47 @@ import React, { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const path = usePathname();
   const [isClick, setisClick] = useState(false);
 
   const toggleNav = () => {
     setisClick(!isClick);
   };
 
+  const navLink = [
+    {
+      id: "Courses",
+      link: "/courses",
+    },
+    {
+      id: "Places",
+      link: "/places",
+    },
+    {
+      id: "Species",
+      link: "/species",
+    },
+    {
+      id: "Mission",
+      link: "/mission",
+    },
+    {
+      id: "Rules",
+      link: "/rulespage",
+    },
+    {
+      id: "Join",
+      link: "/join",
+    },
+  ];
+
   return (
     <>
-      <nav className="fixed top-0 z-10 sm:mt-4 w-full">
-        <div className="container bg-secondary-200 backdrop-blur-sm mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-lg shadow-md md:shadow-lg shadow-emerald-500/20 md:shadow-slate-900/30">
+      <nav className="fixed top-[-1px] z-10 sm:mt-4 w-full">
+        <div className="container bg-secondary-200 backdrop-blur-sm mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-lg shadow-md md:shadow-lg shadow-emerald-500/10 md:shadow-slate-900/30">
           <div className="flex items-center justify-between h-12 text-xs">
             
             {/* logo part */}
@@ -30,48 +59,37 @@ const Navbar = () => {
             {/* pc nav item middle */}
             <div className="hidden md:block">
               <div className="ml-4 item-center space-x-4">
-                <Link
-                  href="/courses"
-                  className="hover:text-primary rounded-full py-1 px-4"
-                >
-                  Courses
-                </Link>
-                <Link
-                  href="/places"
-                  className="hover:text-primary rounded-full py-1 px-4"
-                >
-                  Places
-                </Link>
-                <Link
-                  href="/species"
-                  className="hover:text-primary rounded-full py-1 px-4"
-                >
-                  Species
-                </Link>
-                <Link
-                  href="/mission"
-                  className="hover:text-primary rounded-full py-1 px-4"
-                >
-                  Mission
-                </Link>
-                <Link
-                  href="/rulespage"
-                  className="hover:text-primary rounded-full py-1 px-4"
-                >
-                  Rules
-                </Link>
-                
+                {navLink
+                  .filter((item, index) => index < 5)
+                  .map(({ id, link }) => (
+                    <Link
+                      key={id}
+                      href={link}
+                      className={`${
+                        path === link ? "font-bold" : ""
+                      } hover:text-primary rounded-full py-1 px-4`}
+                    >
+                      {id}
+                    </Link>
+                  ))}
               </div>
             </div>
 
             {/* pc join right */}
             <div className="hidden md:block">
-            <Link
-                  href="/join"
-                  className="hover:text-primary rounded-full py-1 px-4"
-                >
-                  Join
-                </Link>
+              {navLink
+                .filter((item, index) => index == 5)
+                .map(({ id, link }) => (
+                  <Link
+                    key={id}
+                    href={link}
+                    className={`${
+                      path === link ? "font-bold" : ""
+                    } hover:text-primary rounded-full py-1 px-4`}
+                  >
+                    {id}
+                  </Link>
+                ))}
             </div>
 
             {/* mobile nav item */}
@@ -90,56 +108,24 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* add screen if mobile */}
+        {/* mobile */}
         {isClick && (
           <div className="md:hidden">
             <div className="h-screen bg-secondary-400 fixed top-0 w-full text-xl font-semibold">
-                <div className="flex justify-end mt-4 mr-6">
-                    <XMarkIcon className="h-6 w-6" onClick={toggleNav}/>
-                </div>
-              
-              <Link
-                href="/"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12 mt-12"
-              >
-                Home
-              </Link>
-              <Link
-                href="/courses"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12"
-              >
-                Courses
-              </Link>
-              <Link
-                href="/places"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12"
-              >
-                Places
-              </Link>
-              <Link
-                href="/species"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12"
-              >
-                Species
-              </Link>
-              <Link
-                href="/mission"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12"
-              >
-                Mission
-              </Link>
-              <Link
-                href="/rulespage"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12"
-              >
-                Rules
-              </Link>
-              <Link
-                href="/join"
-                className="hover:text-primary  block rounded-full py-3 px-4 ml-12"
-              >
-                Join
-              </Link>
+              <div className="flex justify-end mt-4 mr-6 mb-12">
+                <XMarkIcon className="h-6 w-6" onClick={toggleNav} />
+              </div>
+              {navLink.map(({ id, link }) => (
+                <Link
+                  key={id}
+                  href={link}
+                  className={`${
+                    path === link ? "text-primary" : ""
+                  } hover:text-primary  block rounded-full py-3 px-4 ml-12`}
+                >
+                  {id}
+                </Link>
+              ))}
             </div>
           </div>
         )}
