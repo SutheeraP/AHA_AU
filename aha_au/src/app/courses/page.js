@@ -133,7 +133,7 @@ export default function page() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-24 mt-12 text-sm font-light">
           {cardLevel.map(({ level, content }) => (
-            <div>
+            <div key={level}>
               <div className="w-16 h-16 m-auto flex border border-primary rounded-full text-lg font-normal">
                 <div className="w-fit m-auto">{level}</div>
               </div>
@@ -148,7 +148,7 @@ export default function page() {
         <hr/>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-24 mt-12 text-sm font-light">
           {cardETC.map(({ label, content }) => (
-            <div>
+            <div key={label}>
               <div className="font-normal text-base w-fit border-b border-primary mb-3">{label}</div>
               {content}
             </div>
