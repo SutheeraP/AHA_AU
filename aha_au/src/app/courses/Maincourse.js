@@ -11,8 +11,14 @@ const kanit = Kanit({
 
 const Maincourse = ({content}) => {
   return (
-    <main className="bg-secondary-400 text-white w-full min-h-screen">
+    <main className="bg-secondary-400 text-white w-full min-h-screen overflow-hidden relative">
       <div className="absolute left-[-200px] top-[-200px]">
+        <GreenBlur />
+      </div>
+      <div className="absolute left-[-200px] md:left-[0px] top-[1500px]">
+        <GreenBlur />
+      </div>
+      <div className="absolute right-[-200px] md:right-[0px] top-[900px]">
         <GreenBlur />
       </div>
       <Navbar />
@@ -31,7 +37,6 @@ const Maincourse = ({content}) => {
 
             <div className="md:col-span-10">
               {content ? content : 'no content'}
-              what the fuck
             </div>
           </div>
         </div>
