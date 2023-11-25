@@ -74,7 +74,7 @@ export default function page() {
 
   const content = (
     <>
-    <Labelmobile icon='/lab.svg'/>
+    <Labelmobile icon='/lab.svg' label='วิชาปฎิบัติ'/>
     <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
       {classContent.map((classContent) => (
         <Classcard

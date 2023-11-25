@@ -44,7 +44,7 @@ export default function page() {
 
   const content = (
     <>
-      <Labelmobile icon="/lecture.svg" />
+      <Labelmobile icon="/lecture.svg" label='วิชาทฤษฎี'/>
       <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
         {classContent.map((classContent) => (
           <Classcard
