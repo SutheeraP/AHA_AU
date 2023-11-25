@@ -6,7 +6,7 @@ import { Kanit } from "@next/font/google";
 import Footer from "../component/Footer";
 const kanit = Kanit({
   subsets: ["latin", "thai"],
-  weight: ["300", "400", "600", "700"],
+  weight: ["300", "400", "600", "700", "100", "200"],
 });
 
 const Maincourse = ({content}) => {
