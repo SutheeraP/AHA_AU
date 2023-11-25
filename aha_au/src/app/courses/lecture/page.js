@@ -44,20 +44,19 @@ export default function page() {
 
   const content = (
     <>
-    <Labelmobile icon='/lecture.svg'/>
-    <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
-      {classContent.map((classContent) => (
-        <Classcard
-        key={classContent.en}
-          th={classContent.th}
-          en={classContent.en}
-          icon={classContent.icon}
-          detail={classContent.detail}
-        ></Classcard>
-      ))}
-    </div>
+      <Labelmobile icon="/lecture.svg" />
+      <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
+        {classContent.map((classContent) => (
+          <Classcard
+            key={classContent.en}
+            th={classContent.th}
+            en={classContent.en}
+            icon={classContent.icon}
+            detail={classContent.detail}
+          ></Classcard>
+        ))}
+      </div>
     </>
-    
   );
 
   return (
