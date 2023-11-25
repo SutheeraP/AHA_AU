@@ -48,6 +48,7 @@ export default function page() {
     <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
       {classContent.map((classContent) => (
         <Classcard
+        key={en}
           th={classContent.th}
           en={classContent.en}
           icon={classContent.icon}
