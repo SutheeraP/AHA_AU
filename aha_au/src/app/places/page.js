@@ -157,7 +157,7 @@ export default function page() {
                         : "text-faded border-faded font-light hover:text-primary"
                     }  border w-fit py-1 px-8 rounded-full cursor-pointer text-sm`}
                   >
-                    {navigate.label}
+                    {navigate.label}what
                   </div>
                 ))}
               </div>
@@ -178,7 +178,7 @@ export default function page() {
           {/* content */}
           <div className="grid md:grid-cols-2 gap-4 pt-12">
             {filterplace.map((filterplace) => (
-              <div className="h-full bg-darklight-400 w-full py-4 px-6 rounded-2xl backdrop-blur-sm">
+              <div key={filterplace.label} className="h-full bg-darklight-400 w-full py-4 px-6 rounded-2xl backdrop-blur-sm">
                 <div className="flex flex-col gap-3">
                   <div className="flex gap-4">
                     <div className="flex flex-col md:text-xl tracking-wider">
