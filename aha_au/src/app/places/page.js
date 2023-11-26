@@ -262,6 +262,7 @@ export default function Page() {
 
   const handleClick = (value) => {
     setCurrent(value);
+    window.scrollTo(0, 0);
   };
 
   return (
