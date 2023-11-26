@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Navbar from "../component/Navbar";
 import GreenBlur from "../component/GreenBlur";
@@ -9,7 +10,7 @@ const kanit = Kanit({
   weight: ["300", "400", "600", "700", "100", "200"],
 });
 
-export default function page() {
+export default function Page() {
   const navigate = [
     {
       label: "อาคารเรียนหลัก",
@@ -157,7 +158,7 @@ export default function page() {
                         : "text-faded border-faded font-light hover:text-primary"
                     }  border w-fit py-1 px-8 rounded-full cursor-pointer text-sm`}
                   >
-                    {navigate.label}what
+                    {navigate.label}
                   </div>
                 ))}
               </div>
