@@ -316,7 +316,6 @@ export default function Page() {
               <div className="text-faded text-xs font-light mx-auto md:px-40  text-center">
                 {navigate.find((item) => item.tag === current).detail}
               </div>
-              <div></div>
             </div>
           </nav>
 
@@ -326,10 +325,15 @@ export default function Page() {
               icon={navigate.find((item) => item.tag === current).iconLabel}
               label={navigate.find((item) => item.tag === current).label}
             />
+            <div>
+            <div className="text-faded text-xs font-light mx-auto md:px-40  text-center">
+                {navigate.find((item) => item.tag === current).detail}
+              </div>
+            </div>
           </div>
 
           {/* content */}
-          <div className="grid md:grid-cols-2 gap-4 md:pt-12">
+          <div className="grid md:grid-cols-2 gap-4 pt-12">
             {filterplace.map((filterplace) => (
               <div
                 key={filterplace.label}
