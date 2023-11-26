@@ -265,14 +265,17 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-secondary-400 text-white w-full min-h-screen">
+    <main className="bg-secondary-400 text-white w-full min-h-screen relative overflow-hidden">
       <div className="absolute left-[-200px] top-[-200px]">
+        <GreenBlur />
+      </div>
+      <div className="absolute right-[-200px] top-[500px]">
         <GreenBlur />
       </div>
       <Navbar />
 
       <div className={kanit.className}>
-        <div className="pt-24 container mx-auto px-4">
+        <div className="pt-24 container mx-auto px-4 md:pb-0 pb-56">
           <nav>
             {/* mobile */}
             <div className="md:hidden">
@@ -355,7 +358,10 @@ export default function Page() {
         </div>
       </div>
 
-      <Footer />
+<div className="hidden md:block">
+ <Footer />
+</div>
+     
     </main>
   );
 }
