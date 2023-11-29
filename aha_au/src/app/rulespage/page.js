@@ -59,7 +59,7 @@ export default function page() {
         <div className={kanit.className}>
           <Ruleshero />
           {content.map((item) => (
-            <Rulescontent label={item.label} data={item.content}/>
+            <Rulescontent key={item.label}  label={item.label} data={item.content}/>
           ))}
           
         </div>
