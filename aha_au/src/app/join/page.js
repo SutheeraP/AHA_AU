@@ -44,7 +44,7 @@ export default function page() {
                 <Link key={item.label} href={item.path}>
                   <div className="bg-darklight-400 flex md:flex-col gap-4 rounded-2xl md:aspect-square h-full">
                     <div className="my-auto">
-                      <div className="flex md:flex-col gap-4 py-4">
+                      <div className="flex md:flex-col px-4 gap-4 py-4">
                         <Image
                           src={item.icon}
                           width={20}
@@ -60,7 +60,7 @@ export default function page() {
                           className="md:flex hidden mx-auto"
                         />
                         <div className="md:text-center md:text-xl">{item.label}</div>
-                        <div className="hidden md:block text-xs text-primary border py-1 text-center border-primary rounded-full w-2/5 mx-auto">
+                        <div className="hidden md:block text-xs text-primary border py-1 text-center border-primary rounded-full w-3/5 mx-auto">
                           รายละเอียด
                         </div>
                       </div>
