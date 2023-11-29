@@ -50,16 +50,16 @@ const Examplesection = () => {
         ตัวอย่างภารกิจ
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-16 xl:gap-32 mb-12">
+      <div className="grid md:grid-cols-3 gap-4 lg:gap-10 xl:gap-32 mb-12">
         {contentMission.map((item) => (
-          <div className="border border-primary rounded-[30px] px-5 py-16">
+          <div key={item.label} className="border border-primary rounded-[30px] px-5 py-16">
             <div className="text-center text-faded text-sm">Level</div>
             <div className="text-center text-2xl border-b border-faded pb-12 mb-12">
               {item.label}
             </div>
             <ul className="list-disc pl-4 text-xs font-light">
               {item.content.map((list) => (
-                <li>{list}</li>
+                <li key={list}>{list}</li>
               ))}
             </ul>
           </div>
