@@ -3,7 +3,6 @@ import Navbar from "../component/Navbar";
 import GreenBlur from "../component/GreenBlur";
 import Shopsection from "./Shopsection";
 import Examplesection from "./Examplesection";
-import Endingsection from "./Endingsection";
 import Footer from "../component/Footer";
 
 import { Kanit } from "@next/font/google";
@@ -23,7 +22,6 @@ export default function page() {
         <div className={kanit.className}>
           <Shopsection />
           <Examplesection />
-          <Endingsection />
         </div>
       </div>
 

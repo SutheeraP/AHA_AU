@@ -50,11 +50,14 @@ const Examplesection = () => {
         ตัวอย่างภารกิจ
       </div>
 
-      <div className="grid md:grid-cols-3 gap-4 lg:gap-10 xl:gap-32 mb-12">
+      <div className="grid md:grid-cols-3 gap-4 mb-12">
         {contentMission.map((item) => (
-          <div key={item.label} className="border border-primary rounded-[30px] px-5 py-16">
+          <div
+            key={item.label}
+            className="border border-primary rounded-[30px] px-5 py-8"
+          >
             <div className="text-center text-faded text-sm">Level</div>
-            <div className="text-center text-2xl border-b border-faded pb-12 mb-12">
+            <div className="text-center text-3xl border-b border-faded pb-8 mb-8">
               {item.label}
             </div>
             <ul className="list-disc pl-4 text-xs font-light">
@@ -66,11 +69,40 @@ const Examplesection = () => {
         ))}
       </div>
 
-      <Cardtoggle
-        icon="./mission.svg"
-        label="ขอบเขตการช่วยเหลือ"
-        data="ภารกิจที่ได้รับจะเป็นการมอบหมายจากทางโรงเรียนนั้นไม่สามารถเลือกได้เอง โดยส่วนใหญ่จะคัดความเหมาะสมของความยากง่ายจากระดับของฮีโร่แต่ละคน บางครั้งก็ได้รับมอบหมายเป็นทีมสุ่ม หรือบางครั้งก็เป็นการฉายเดี่ยว ส่วนใหญ่จะทำภารกิจบนโลก แต่หากมีความจำเป็นก็สามารถออกทำภารกิจที่นอกโลกหรือมิติอื่นได้เช่นกัน ผู้เข้าร่วมแท็กสามารถสมมุติภารกิจขึ้นเอาเองได้"
-      />
+      <div className="grid md:grid-cols-2 gap-4">
+        <div>
+          <Cardtoggle
+            icon="./mission.svg"
+            label="ขอบเขตการช่วยเหลือ"
+            data="ภารกิจที่ได้รับจะเป็นการมอบหมายจากทางโรงเรียนนั้นไม่สามารถเลือกได้เอง โดยส่วนใหญ่จะคัดความเหมาะสมของความยากง่ายจากระดับของฮีโร่แต่ละคน บางครั้งก็ได้รับมอบหมายเป็นทีมสุ่ม หรือบางครั้งก็เป็นการฉายเดี่ยว ส่วนใหญ่จะทำภารกิจบนโลก แต่หากมีความจำเป็นก็สามารถออกทำภารกิจที่นอกโลกหรือมิติอื่นได้เช่นกัน ผู้เข้าร่วมแท็กสามารถสมมุติภารกิจขึ้นเอาเองได้"
+          />
+        </div>
+        <div>
+          <Cardtoggle
+            icon="./mission.svg"
+            label="การจบภารกิจ"
+            data={
+              <div className="grid gap-4">
+                <div>
+                  ภารกิจของเหล่าฮีโร่จะถูกสังเกตการณ์อยู่เสมอจากคณะครูผู้ฝึกสอนและคนของรัฐบาล
+                  คุณมีหน้าที่จัดการกับเหล่าร้ายให้พวกมันยอมถอยกลับไปจากที่ ๆ
+                  มันมาตามดุลยพิจิ หรือตามคำบัญชาที่เบื้องบนส่งมา เช่น
+                </div>
+                <div>
+                  <ul className="list-disc pl-4">
+                    <li>จบชีวิตของพวกมัน</li>
+                    <li>ส่งกลับมิติต้นกำเนิด</li>
+                    <li>ส่งให้ตำรวจ</li>
+                    <li>สั่งสอนให้กลายเป็นคนดี</li>
+                    <li>ส่งให้รัฐจัดการต่อ</li>
+                    <li>พูดให้กลับใจเป็นยอดมนุษย์</li>
+                  </ul>
+                </div>
+              </div>
+            }
+          />
+        </div>
+      </div>
     </div>
   );
 };
