@@ -14,7 +14,7 @@ const kanit = Kanit({
 
 export default function page() {
   return (
-    <main className="bg-secondary-400 text-white h-[2000px] w-full">
+    <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
       <div className="absolute left-[-200px] top-[-200px]">
         <GreenBlur />
       </div>
