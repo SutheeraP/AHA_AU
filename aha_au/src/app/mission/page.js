@@ -17,6 +17,9 @@ export default function page() {
       <div className="absolute left-[-200px] top-[-200px]">
         <GreenBlur />
       </div>
+      <div className="absolute right-[-200px] md:right-[200px] top-[1000px]">
+        <GreenBlur />
+      </div>
       <Navbar />
       <div className="container mx-auto px-4">
         <div className={kanit.className}>
