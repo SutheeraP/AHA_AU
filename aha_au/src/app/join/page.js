@@ -41,7 +41,7 @@ export default function page() {
           <div className="my-auto w-full">
             <div className="grid md:grid-cols-3 gap-4">
               {joinnav.map((item) => (
-                <Link href={item.path}>
+                <Link key={item.label} href={item.path}>
                   <div className="bg-darklight-400 flex md:flex-col gap-4 rounded-2xl md:aspect-square h-full">
                     <div className="my-auto">
                       <div className="flex md:flex-col gap-4 py-4">
