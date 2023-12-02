@@ -28,6 +28,13 @@ export default function page() {
       img: "",
       islink: true,
       isflip: true,
+    },{
+      label: "สิ่งมีชีวิตเวทมนต์",
+      info: "สัตว์มีชีวิตเวทมนต์มักพบในตำนานเทพนิยาย นิทานพื้นบ้าน และวรรณกรรมแฟนตาซี มีพลังหรือลักษณะพิเศษเหนือธรรมชาติที่ทำให้พวกมันแตกต่างจากโลกปกติ สิ่งมีชีวิตเหล่านี้มีทั้งฝ่ายดีและฝ่ายร้าย และขึ้นชื่อในเรื่องความสามารถในการแสดงสิ่งเหนือมนุษย์",
+      path: "/species/magic",
+      img: "",
+      islink: true,
+      isflip: false,
     },
     {
       label: "สิ่งมีชีวิตจากต่างดาว",
@@ -35,23 +42,16 @@ export default function page() {
       path: "/species/alien",
       img: "",
       islink: false,
-      isflip: false,
-    },
-    {
-      label: "สิ่งมีชีวิตเวทมนต์",
-      info: "สัตว์มีชีวิตเวทมนต์มักพบในตำนานเทพนิยาย นิทานพื้นบ้าน และวรรณกรรมแฟนตาซี มีพลังหรือลักษณะพิเศษเหนือธรรมชาติที่ทำให้พวกมันแตกต่างจากโลกปกติ สิ่งมีชีวิตเหล่านี้มีทั้งฝ่ายดีและฝ่ายร้าย และขึ้นชื่อในเรื่องความสามารถในการแสดงสิ่งเหนือมนุษย์",
-      path: "/species/magic",
-      img: "",
-      islink: true,
       isflip: true,
     },
+    
   ];
   return (
-    <main className="bg-secondary-400 text-white w-full">
+    <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
       <div className="absolute left-[-200px] top-[-200px]">
         <GreenBlur />
       </div>
-      <div className="absolute right-[-200px] top-[400px]">
+      <div className="absolute right-[-200px] top-[200px]">
         <GreenBlur />
       </div>
       <Navbar />
