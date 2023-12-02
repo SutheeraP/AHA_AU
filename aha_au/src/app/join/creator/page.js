@@ -46,8 +46,8 @@ export default function page() {
   const thiscontent = (
     <div className="md:w-3/5">
       <ol className="list-decimal text-xs font-thin">
-        {rule.map((item) => (
-          <li key={item} className="pb-2">{item}</li>
+        {rule.map((item, index) => (
+          <li key={index} className="pb-2">{item}</li>
         ))}
       </ol>
     </div>
