@@ -18,7 +18,7 @@ const BackContent = ({label, content, prev}) => {
             <div>{label}</div>
         </div>
 
-        <div className="pl-8">{content} </div>
+        <div className="pl-9">{content} </div>
         
       </div>
     </div>
