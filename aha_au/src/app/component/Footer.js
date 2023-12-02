@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="container mx-auto px-4 pb-12 text-xs text-faded text-center md:tracking-wide">
-      <div className="h-[0.5px] w-full mx-auto bg-faded mt-60 mb-12"></div>
+      <div className="h-[0.5px] w-full mx-auto bg-faded mt-40 mb-12"></div>
       <div>All informations in this website are fictitious</div>
       <div>©2023 Apex Heroic Academy. All Rights Reserved</div>
       <div className="flex justify-center space-x-1 pt-4">

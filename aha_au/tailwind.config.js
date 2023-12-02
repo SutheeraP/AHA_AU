@@ -21,7 +21,7 @@ module.exports = {
       faded: "#ADB7BE",
       darklight: {
         400: "#15191B",
-        200: "#15191B80",
+        200: "#15191B90",
       },
       secondary: {
         400: "#121212",
