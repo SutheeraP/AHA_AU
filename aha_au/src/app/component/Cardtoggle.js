@@ -24,7 +24,7 @@ const Cardtoggle = ({ icon, label, data }) => {
 
             <div className="flex flex-col w-full">
               <div className="flex justify-between">
-                <div className={`${isExpanded ? "text-primary" : ""} text-sm`}>
+                <div className={`${isExpanded ? "text-primary" : ""} text-sm font-semiblod`}>
                   {label}
                 </div>
                 <div className={`${isExpanded ? "text-primary" : ""}`}>
