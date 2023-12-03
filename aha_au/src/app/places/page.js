@@ -266,7 +266,7 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-secondary-400 text-white w-full min-h-screen relative overflow-hidden">
+    <main className="bg-secondary-400 text-white w-full max-w-screen-xl min-h-screen relative overflow-hidden">
       <div className="absolute left-[-200px] top-[-200px]">
         <GreenBlur />
       </div>
