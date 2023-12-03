@@ -4,7 +4,7 @@ import { Kanit } from "@next/font/google";
 import Link from "next/link";
 const kanit = Kanit({
   subsets: ["latin", "thai"],
-  weight: ["300", "400", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const BackContent = ({label, content, prev}) => {

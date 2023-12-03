@@ -94,7 +94,7 @@ export default function Page() {
                     onClick={() => handleChange(item.id)}
                     className={`${
                       selectedID === item.id
-                        ? "border-b border-primary"
+                        ? "border-b border-primary font-semibold"
                         : "text-faded"
                     } px-4 py-1 hover:cursor-pointer`}
                   >

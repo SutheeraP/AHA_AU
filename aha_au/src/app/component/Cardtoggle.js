@@ -19,12 +19,12 @@ const Cardtoggle = ({ icon, label, data }) => {
         <div className="flex flex-col gap-3">
           <div className="flex gap-4">
             <div>
-              <Image width={25} height={50} src={icon} alt="icon class"></Image>
+              <Image width={25} height={50} src={icon} alt="icon"></Image>
             </div>
 
             <div className="flex flex-col w-full">
               <div className="flex justify-between">
-                <div className={`${isExpanded ? "text-primary" : ""} text-sm font-semiblod`}>
+                <div className={`${isExpanded ? "text-primary" : ""} text-sm font-medium`}>
                   {label}
                 </div>
                 <div className={`${isExpanded ? "text-primary" : ""}`}>
