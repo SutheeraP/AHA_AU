@@ -24,7 +24,7 @@ export default function page() {
     {
       label: "สิ่งมีชีวิตหลังความตาย ",
       info: "การมีอยู่ของโลกหลังความตายเป็นที่ถกเถียงกันมานานกว่าพันปี สิ่งเหล่านี้ไม่เคยได้รับการพิสูจน์จนกระทั่งประตูมิติถูกเปิดออก คนทั้งโลกจึงได้เห็นถึงความสวยงามและความโสมมของสองสถานที่ที่เคยถูกเขียนบนตำราทางศาสนานับร้อยเล่ม ‘นรก’ และ ‘สวรรค์’ ",
-      path: "/species/afterlife",
+      path: "/species/afterdeath",
       img: "",
       islink: true,
       isflip: true,
@@ -57,7 +57,7 @@ export default function page() {
       <Navbar />
 
       <div className={kanit.className}>
-        <div className="container mx-auto px-4 text-sm font-light text-center">
+        <div className="container mx-auto px-4 text-xs md:text-sm font-light text-center">
           <div className="flex min-h-screen">
             <div className="m-auto flex flex-col gap-48">
               <div className="flex justify-center">
@@ -83,17 +83,17 @@ export default function page() {
                       item.isflip ? "md:order-last" : ""
                     } flex justify-center`}
                   >
-                    <Image src="./greenblur.svg" width={200} height={200} />
+                    <Image alt="greenblur" src="./greenblur.svg" width={200} height={200} />
                   </div>
                   <div className="flex flex-col gap-8">
                     <div className="text-lg font-semibold tracking-wider">
                       {item.label}
                     </div>
-                    <div>{item.info}</div>
+                    <div className="">{item.info}</div>
                     {item.islink && (
-                      <div className="flex justify-center md:justify-start">
+                      <div className="flex justify-center md:justify-start text-xs">
                         <Link href={item.path}>
-                          <div className="rounded-full border border-primary text-primary py-1 px-14 font-semibold w-fit">
+                          <div className="rounded-full border border-primary text-primary py-1 px-14 w-fit">
                             เพิ่มเติม
                           </div>
                         </Link>
