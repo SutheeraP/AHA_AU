@@ -6,7 +6,7 @@ import GreenBlur from "@/app/component/GreenBlur";
 import BackContent from "@/app/component/BackContent";
 import Footer from "@/app/component/Footer";
 
-export default function page() {
+export default function Page() {
   const [selectedID, setSelectedID] = useState(1);
   const data = [
     {
