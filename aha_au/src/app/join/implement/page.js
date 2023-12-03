@@ -14,7 +14,7 @@ export default function page() {
             <div className="w-56 h-80 border border-faded rounded-t-full"></div>
           </div>
         </div>
-        <div className="md:col-span-3 flex flex-col font-light text-sm gap-8">
+        <div className="md:col-span-3 flex flex-col font-light text-xs md:text-sm gap-8">
           <div>
             เนื่องจากทีมผู้สร้างมีข้อจำกัดหลายด้านที่ทำไม่สามารถพัฒนาแท็กนี้ให้เป็นคอมมูได้
             หากผู้ใดสนใจนำ #AHA_AU ไปพัฒนาต่อเป็นคอมมูบนแพลทฟอร์มออนไลน์
