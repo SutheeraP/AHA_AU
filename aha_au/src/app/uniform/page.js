@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../component/Navbar";
 import GreenBlur from "../component/GreenBlur";
-import Link from "next/link";
-import Image from "next/image";
 import Footer from "../component/Footer";
 
+
 import { Kanit } from "@next/font/google";
+import Herouniform from "./Herouniform";
 const kanit = Kanit({
   subsets: ["latin", "thai"],
   weight: ["300", "400", "600", "700"],
@@ -39,9 +39,11 @@ export default function page() {
       </div>
 
       <Navbar />
+
+      <Herouniform/>
       <div className={kanit.className}>
         <div className="min-h-screen flex container mx-auto px-4 relative">
-        test
+        
         </div>
       </div>
 
