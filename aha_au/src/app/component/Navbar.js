@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const path1 = usePathname().split("/");
@@ -27,6 +28,10 @@ const Navbar = () => {
     {
       id: "Places",
       link: "/places",
+    },
+    {
+      id: "Uniform",
+      link: "/uniform",
     },
     {
       id: "Species",
@@ -56,7 +61,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link href="/" className="font-bold text-base">
-                  LOGO
+                  <Image src='./logo.svg' width={30} height={20}/>
                 </Link>
               </div>
             </div>
@@ -65,7 +70,7 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-4 item-center space-x-4">
                 {navLink
-                  .filter((item, index) => index < 6 && index > 0)
+                  .filter((item, index) => index < 7 && index > 0)
                   .map(({ id, link }) => (
                     <Link
                       key={id}
@@ -83,7 +88,7 @@ const Navbar = () => {
             {/* pc join right */}
             <div className="hidden md:block">
               {navLink
-                .filter((item, index) => index == 6)
+                .filter((item, index) => index == 7)
                 .map(({ id, link }) => (
                   <Link
                     key={id}
