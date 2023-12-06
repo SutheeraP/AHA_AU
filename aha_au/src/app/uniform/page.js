@@ -14,12 +14,12 @@ export default function page() {
         <Herouniform />
       </div>
       <div className="relative bg-secondary-400 overflow-hidden w-full">
-        {/* <div className="absolute left-[-200px] top-[-200px] z-0">
+        <div className="absolute left-[-200px] top-[-200px] z-0">
           <GreenBlur />
         </div>
-        <div className="absolute right-[-200px] top-[500px] z-0">
+        <div className="absolute right-[0px] bottom-[0px] z-0">
           <GreenBlur />
-        </div> */}
+        </div>
         <Contentuniform />
         <Footer />
       </div>
