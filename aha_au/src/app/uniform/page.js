@@ -1,17 +1,20 @@
-import React, { Suspense } from "react";
+"use client";
+
+import React from "react";
 import Navbar from "../component/Navbar";
 import GreenBlur from "../component/GreenBlur";
 import Footer from "../component/Footer";
 import Herouniform from "./Herouniform";
-// import Contentuniform from "./Contentuniform";
-const Contentuniform = React.lazy(() => import("./Contentuniform"));
+import Contentuniform from "./Contentuniform";
 
 export default function page() {
+
   return (
     <main className="bg-secondary-400 text-white w-full relative">
       <Navbar />
 
-      <div className="sticky top-0 z-0">
+      {/* <div className="sticky top-0 z-0"> */}
+      <div className="">
         <Herouniform />
       </div>
       <div className="relative bg-secondary-400 overflow-hidden w-full">
@@ -21,9 +24,7 @@ export default function page() {
         <div className="absolute right-[0px] bottom-[0px] z-0">
           <GreenBlur />
         </div>
-        <Suspense fallback={<div>loading...</div>}>
           <Contentuniform />
-        </Suspense>
 
         <Footer />
       </div>
