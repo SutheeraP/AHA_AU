@@ -7,11 +7,12 @@ const Herosection = () => {
       <div className="flex h-screen">
         <div className="m-auto">
           <div className="flex flex-col md:flex-row-reverse container mx-auto px-4 lg:px-36">
-            <div className="mx-auto px-2 pb-24 md:py-16 relative">
+            <div className="mx-auto px-10 md:px-2 pb-24 md:py-16 relative">
               <Image
                 src="/greenblur.svg"
                 width={400}
                 height={50}
+                loading="lazy"
                 className="absolute"
               />
               <Image src="/logo.svg" width={400} height={50} />
