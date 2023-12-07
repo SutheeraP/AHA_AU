@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Navbar from "../component/Navbar";
 import GreenBlur from "../component/GreenBlur";
 import Footer from "../component/Footer";
 import Herouniform from "./Herouniform";
-import Contentuniform from "./Contentuniform";
+// import Contentuniform from "./Contentuniform";
+const Contentuniform = React.lazy(() => import("./Contentuniform"));
 
 export default function page() {
   return (
@@ -20,7 +21,10 @@ export default function page() {
         <div className="absolute right-[0px] bottom-[0px] z-0">
           <GreenBlur />
         </div>
-        <Contentuniform />
+        <Suspense fallback={<div>loading...</div>}>
+          <Contentuniform />
+        </Suspense>
+
         <Footer />
       </div>
     </main>
