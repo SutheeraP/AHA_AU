@@ -4,6 +4,7 @@ import GreenBlur from "./component/GreenBlur";
 import Herosection from "./component/Herosection";
 import Footer from "./component/Footer";
 import { Kanit } from "@next/font/google";
+import StarsCanvas from "./component/StarComponent";
 const kanit = Kanit({
   subsets: ["latin", "thai"],
   weight: ["300", "400", "600", "700"],
@@ -12,6 +13,7 @@ const kanit = Kanit({
 export default function Home() {
   return (
     <main className="bg-secondary-400 text-white overflow-hidden relative">
+      <StarsCanvas/>
       <div className="max-w-screen-xl mx-auto relative">
         <div className="absolute left-[-200px] top-[-200px]">
           <GreenBlur />

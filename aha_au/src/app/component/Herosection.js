@@ -13,7 +13,7 @@ const Herosection = () => {
                 width={400}
                 height={50}
                 loading="lazy"
-                className="absolute"
+                className="absolute z-0"
               />
               <Image src="/logo.svg" width={400} height={50} />
             </div>
