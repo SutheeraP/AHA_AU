@@ -1,14 +1,16 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div>
-      <div className="container mx-auto px-4 pb-12 text-xs text-faded text-center md:tracking-wide">
+      <div className="container mx-auto px-4 pb-12 text-xs text-faded text-center md:tracking-wide relative z-30">
         <div className="h-[0.5px] w-full mx-auto bg-faded mt-40 mb-12"></div>
         <div>All informations in this website are fictitious</div>
         <div>©2023 Apex Heroic Academy. All Rights Reserved</div>
-        <div className="flex justify-center space-x-1 pt-4">
-          <svg
+        <div className="flex justify-center space-x-3 pt-4">
+          <Link href='https://twitter.com/Apex_Heroic' target="_blank">
+<svg
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -27,8 +29,10 @@ const Footer = () => {
               </clipPath>
             </defs>
           </svg>
+          </Link>
 
-          <svg
+          <Link href='https://www.facebook.com/apex.heroic.academy' target="_blank">
+<svg
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -47,6 +51,10 @@ const Footer = () => {
               </clipPath>
             </defs>
           </svg>
+          </Link>
+          
+
+          
         </div>
       </div>
     </div>
