@@ -146,12 +146,13 @@ const Contentuniform = () => {
         <div className="text-lg md:text-xl font-bold tracking-wider border-b  border-primary pb-4 pt-32">
           UNIFORM
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-12 md:mt-8">
           {uniformsectiob.map((item) => (
             <div className="text-center" key={item.id}>
               <div className="px-12 relative">
                 <div className="absolute flex w-full h-full top-0 left-0 z-0">
-                  <div className="m-auto border border-primary rounded-full w-60 h-60"></div>
+                  <div className="m-auto border border-primary rounded-full w-60 aspect-square"></div>
                 </div>
                 <div
                   className={`${item.img} bg-no-repeat bg-cover bg-center w-full aspect-[2/3] relative`}

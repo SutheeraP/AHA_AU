@@ -107,12 +107,13 @@ export default function page() {
     },
     {
       id: 17,
-      content: "อนุญาตให้มีสัตว์เลี้ยงหรือสัตว์ที่ร่วมต่อสู้ได้ ( Animal Sidekick ) ไม่จำเป็นต้องเป็นสิ่งมีชีวิตจากโลกมนุษย์ สามารถคิดและออกแบบเองได้ แต่ต้องมีขนาดเหมาะกับสถานที่ในโรงเรียนและยุคสมัย สัตว์ขนาดใหญ่เช่น ช้างแอฟริกาหรือไดโนเสาร์ ขอความร่วมมือไม่ให้ลงเพราะหลุด Setting",
+      content:
+        "อนุญาตให้มีสัตว์เลี้ยงหรือสัตว์ที่ร่วมต่อสู้ได้ ( Animal Sidekick ) ไม่จำเป็นต้องเป็นสิ่งมีชีวิตจากโลกมนุษย์ สามารถคิดและออกแบบเองได้ แต่ต้องมีขนาดเหมาะกับสถานที่ในโรงเรียนและยุคสมัย สัตว์ขนาดใหญ่เช่น ช้างแอฟริกาหรือไดโนเสาร์ ขอความร่วมมือไม่ให้ลงเพราะหลุด Setting",
     },
   ];
   const thiscontent = (
     <div className="md:w-3/5 pl-4">
-      <ol className="list-decimal text-xs font-thin">
+      <ol className="list-decimal text-xs md:text-sm font-thin">
         {rule.map((item) => (
           <li key={item.id} className="pb-2">
             {item.content}
@@ -123,21 +124,23 @@ export default function page() {
   );
 
   return (
-    <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
-      <div className="absolute left-[-200px] top-[-200px] z-0">
-        <GreenBlur />
-      </div>
-      <div className="absolute right-[-200px] top-[500px] z-0">
-        <GreenBlur />
-      </div>
-      <Navbar />
+    <main className="bg-secondary-400 min-h-screen text-white w-full relative overflow-hidden">
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute left-[-200px] top-[-200px] z-0">
+          <GreenBlur />
+        </div>
+        <div className="absolute right-[-200px] top-[500px] z-0">
+          <GreenBlur />
+        </div>
+        <Navbar />
 
-      <BackContent
-        label="เกณฑ์การสร้างตัวละคร"
-        content={thiscontent}
-        prev="/join"
-      />
-      <Footer />
+        <BackContent
+          label="เกณฑ์การสร้างตัวละคร"
+          content={thiscontent}
+          prev="/join"
+        />
+        <Footer />
+      </div>
     </main>
   );
 }

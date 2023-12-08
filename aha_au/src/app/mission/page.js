@@ -14,21 +14,23 @@ const kanit = Kanit({
 export default function page() {
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
-      <div className="absolute left-[-200px] top-[-200px]">
-        <GreenBlur />
-      </div>
-      <div className="absolute right-[-200px] md:right-[200px] top-[1000px]">
-        <GreenBlur />
-      </div>
-      <Navbar />
-      <div className="container mx-auto px-4">
-        <div className={kanit.className}>
-          <Shopsection />
-          <Examplesection />
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute left-[-200px] top-[-200px]">
+          <GreenBlur />
         </div>
-      </div>
+        <div className="absolute right-[-200px] md:right-[200px] top-[1000px]">
+          <GreenBlur />
+        </div>
+        <Navbar />
+        <div className="container mx-auto px-4">
+          <div className={kanit.className}>
+            <Shopsection />
+            <Examplesection />
+          </div>
+        </div>
 
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 }

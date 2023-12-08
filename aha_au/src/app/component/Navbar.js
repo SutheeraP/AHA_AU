@@ -53,8 +53,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-[-1px] sm:mt-4 w-full z-50">
-        <div className="container bg-secondary-200 backdrop-blur-sm mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-lg shadow-md md:shadow-lg shadow-emerald-500/10 md:shadow-slate-900/30">
+      <nav className="fixed top-[-1px] w-full max-w-screen-xl sm:mt-4 z-50">
+        <div className="bg-secondary-200 container backdrop-blur-sm mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-lg shadow-md md:shadow-lg shadow-emerald-500/10 md:shadow-slate-900/30">
           <div className="flex items-center justify-between h-12 text-xs">
             
             {/* logo part */}
@@ -68,7 +68,7 @@ const Navbar = () => {
 
             {/* pc nav item middle */}
             <div className="hidden md:block">
-              <div className="ml-4 item-center space-x-4">
+              <div className="item-center space-x-4">
                 {navLink
                   .filter((item, index) => index < 7 && index > 0)
                   .map(({ id, link }) => (
@@ -118,7 +118,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* mobile */}
+        {/* mobile content */}
         {isClick && (
           <div className="md:hidden">
             <div className="h-screen bg-secondary-400 fixed top-0 w-full text-xl font-semibold">

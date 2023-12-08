@@ -28,7 +28,8 @@ export default function page() {
       img: "",
       islink: true,
       isflip: true,
-    },{
+    },
+    {
       label: "สิ่งมีชีวิตเวทมนต์",
       info: "สัตว์มีชีวิตเวทมนต์มักพบในตำนานเทพนิยาย นิทานพื้นบ้าน และวรรณกรรมแฟนตาซี มีพลังหรือลักษณะพิเศษเหนือธรรมชาติที่ทำให้พวกมันแตกต่างจากโลกปกติ สิ่งมีชีวิตเหล่านี้มีทั้งฝ่ายดีและฝ่ายร้าย และขึ้นชื่อในเรื่องความสามารถในการแสดงสิ่งเหนือมนุษย์",
       path: "/species/magic",
@@ -44,88 +45,100 @@ export default function page() {
       islink: false,
       isflip: true,
     },
-    
   ];
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
-      <div className="absolute left-[-200px] top-[-200px]">
-        <GreenBlur />
-      </div>
-      <div className="absolute right-[-200px] top-[200px]">
-        <GreenBlur />
-      </div>
-      <Navbar />
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute left-[-200px] top-[-200px]">
+          <GreenBlur />
+        </div>
+        <div className="absolute right-[-200px] top-[200px]">
+          <GreenBlur />
+        </div>
+        <Navbar />
 
-      <div className={kanit.className}>
-        <div className="container mx-auto px-4 text-xs md:text-sm font-light text-center">
-          <div className="flex min-h-screen">
-            <div className="m-auto flex flex-col gap-48">
-              <div className="flex justify-center">
-                <div className="md:w-4/5">
-                  หลายศตวรรษที่ผ่านมาบนโลกมีสิ่งมีชีวิตมากมายที่อาศัยอยู่นอกเหนือจาก
-                  ‘มนุษย์’ พวกเขาปะปน
-                  แอบแฝงและใช้ชีวิตอยู่ในสังคมโดยไม่ให้ใครรู้ถึงความพิเศษเหล่านั้น
-                  แต่เมื่อถึงคราวที่ ‘บ้าน’ ที่อาศัยอยู่ถูกรุกราน
-                  กลุ่มคนเหล่านั้นจะก้าวออกมาและปราบปรามอันตรายที่กำลังคืบคลานเข้ามา
+        <div className={kanit.className}>
+          <div className="container mx-auto px-4 text-xs md:text-sm font-light text-center">
+            <div className="flex min-h-screen">
+              <div className="m-auto flex flex-col gap-48">
+                <div className="flex justify-center">
+                  <div className="md:w-3/5">
+                    หลายศตวรรษที่ผ่านมาบนโลกมีสิ่งมีชีวิตมากมายที่อาศัยอยู่นอกเหนือจาก
+                    ‘มนุษย์’ พวกเขาปะปน
+                    แอบแฝงและใช้ชีวิตอยู่ในสังคมโดยไม่ให้ใครรู้ถึงความพิเศษเหล่านั้น
+                    แต่เมื่อถึงคราวที่ ‘บ้าน’ ที่อาศัยอยู่ถูกรุกราน
+                    กลุ่มคนเหล่านั้นจะก้าวออกมาและปราบปรามอันตรายที่กำลังคืบคลานเข้ามา
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div className="">สิ่งมีชีวิตจากมิติทั้ง 4</div>
+            <div className="flex flex-col gap-48 md:text-left">
+              {content.map((item) => (
+                <div key={item.label}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                      className={`${
+                        item.isflip ? "md:order-last" : ""
+                      } flex justify-center`}
+                    >
+                      <Image
+                        alt="greenblur"
+                        src="./greenblur.svg"
+                        width={200}
+                        height={200}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-8">
+                      <div className="text-lg font-semibold tracking-wider">
+                        {item.label}
+                      </div>
+                      <div className="">{item.info}</div>
+                      {item.islink && (
+                        <div className="flex justify-center md:justify-start text-xs">
+                          <Link href={item.path}>
+                            <div className="rounded-full border border-primary text-primary py-1 px-14 w-fit">
+                              เพิ่มเติม
+                            </div>
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-48 flex flex-col gap-4 text-start font-normal">
+              <Cardtoggle
+                icon="./sample-class.svg"
+                label="การเป็นลูกผสมระหว่างเผ่าพันธุ์"
+                data="อนุญาตให้ทำได้, สามารถมีรูปร่าง รวมถึงพลังวิเศษจากแต่ละเผ่าได้ ขึ้นอยู่กับการออกแบบตัวละครของผู้เล่นเอง"
+              />
+              <Cardtoggle
+                icon="./sample-class.svg"
+                label="เผ่าพันธุ์นอกเหนือจากสี่มิติที่กล่าวมา"
+                data={
+                  <div>
+                    สิ่งมีชีวิตบนโลกมนุษย์, สิ่งมีชีวิตจากโลกหลังความตาย,
+                    สิ่งมีชีวิตจากต่างดาว,
+                    และสิ่งมีชีวิตเวทมนต์ถือว่าเป็นขอบเขตที่กว้างมาก
+                    และอยากให้ทุกคนสร้างสรรค์ตัวละครให้อยู่ภายใต้เซ็ทติ้งที่กำหนดให้
+                    หากเป็นสิ่งมีชีวิตที่ไม่ได้อยู่ในรูปแบบของมนุษย์ อาทิ มังกร
+                    ยูนิคอร์น หรืองู สามารถทำได้ แต่ตัวละครนั้น ๆ
+                    จะต้องมีร่างกายของมนุษย์ ด้วย
+                    <br></br>
+                    <br></br>
+                    หากไม่มั่นใจว่าคาร์แรคเตอร์ของตัวเองหลุดธีมหรือไม่สามารถสอบถามได้
+                  </div>
+                }
+              />
             </div>
           </div>
-
-          <div className="flex flex-col gap-48 md:text-left">
-            {content.map((item) => (
-              <div key={item.label}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div
-                    className={`${
-                      item.isflip ? "md:order-last" : ""
-                    } flex justify-center`}
-                  >
-                    <Image alt="greenblur" src="./greenblur.svg" width={200} height={200} />
-                  </div>
-                  <div className="flex flex-col gap-8">
-                    <div className="text-lg font-semibold tracking-wider">
-                      {item.label}
-                    </div>
-                    <div className="">{item.info}</div>
-                    {item.islink && (
-                      <div className="flex justify-center md:justify-start text-xs">
-                        <Link href={item.path}>
-                          <div className="rounded-full border border-primary text-primary py-1 px-14 w-fit">
-                            เพิ่มเติม
-                          </div>
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-48 flex flex-col gap-4 text-start font-normal">
-            <Cardtoggle
-            icon="./sample-class.svg"
-            label="การเป็นลูกผสมระหว่างเผ่าพันธุ์"
-            data="อนุญาตให้ทำได้, สามารถมีรูปร่าง รวมถึงพลังวิเศษจากแต่ละเผ่าได้ ขึ้นอยู่กับการออกแบบตัวละครของผู้เล่นเอง"
-          />
-            <Cardtoggle
-            icon="./sample-class.svg"
-            label="เผ่าพันธุ์นอกเหนือจากสี่มิติที่กล่าวมา"
-            data={(<div>
-              สิ่งมีชีวิตบนโลกมนุษย์, สิ่งมีชีวิตจากโลกหลังความตาย, สิ่งมีชีวิตจากต่างดาว, และสิ่งมีชีวิตเวทมนต์ถือว่าเป็นขอบเขตที่กว้างมาก และอยากให้ทุกคนสร้างสรรค์ตัวละครให้อยู่ภายใต้เซ็ทติ้งที่กำหนดให้ หากเป็นสิ่งมีชีวิตที่ไม่ได้อยู่ในรูปแบบของมนุษย์ อาทิ มังกร ยูนิคอร์น หรืองู สามารถทำได้ แต่ตัวละครนั้น ๆ จะต้องมีร่างกายของมนุษย์ ด้วย
-              <br></br>
-              <br></br>หากไม่มั่นใจว่าคาร์แรคเตอร์ของตัวเองหลุดธีมหรือไม่สามารถสอบถามได้
-            </div>)}
-          />
-          </div>
-          
         </div>
-      </div>
 
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 }

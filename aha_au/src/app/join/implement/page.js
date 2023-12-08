@@ -61,21 +61,23 @@ export default function page() {
   );
 
   return (
-    <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
-      <div className="absolute left-[-200px] top-[-200px] z-0">
-        <GreenBlur />
-      </div>
-      <div className="absolute right-[-200px] top-[500px] z-0">
-        <GreenBlur />
-      </div>
-      <Navbar />
+    <main className="bg-secondary-400 min-h-screen text-white w-full relative overflow-hidden">
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute left-[-200px] top-[-200px] z-0">
+          <GreenBlur />
+        </div>
+        <div className="absolute right-[-200px] top-[500px] z-0">
+          <GreenBlur />
+        </div>
+        <Navbar />
 
-      <BackContent
-        label="สำหรับผู้ต้องการสานต่อ"
-        content={thiscontent}
-        prev="/join"
-      />
-      <Footer />
+        <BackContent
+          label="สำหรับผู้ต้องการสานต่อ"
+          content={thiscontent}
+          prev="/join"
+        />
+        <Footer />
+      </div>
     </main>
   );
 }

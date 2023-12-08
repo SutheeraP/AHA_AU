@@ -139,20 +139,22 @@ export default function page() {
 
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden min-h-screen text-xs md:text-sm">
-      <div className="absolute left-[-200px] top-[-200px] z-0">
-        <GreenBlur />
-      </div>
-      <div className="absolute right-[-200px] top-[500px] z-0">
-        <GreenBlur />
-      </div>
-      <Navbar />
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute left-[-200px] top-[-200px] z-0">
+          <GreenBlur />
+        </div>
+        <div className="absolute right-[-200px] top-[500px] z-0">
+          <GreenBlur />
+        </div>
+        <Navbar />
 
-      <BackContent
-        label="สิ่งมีชีวิตจากโลกมนุษย์"
-        content={thiscontent}
-        prev="/species"
-      />
-      <Footer />
+        <BackContent
+          label="สิ่งมีชีวิตจากโลกมนุษย์"
+          content={thiscontent}
+          prev="/species"
+        />
+        <Footer />
+      </div>
     </main>
   );
 }

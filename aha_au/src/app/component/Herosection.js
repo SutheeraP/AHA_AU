@@ -22,7 +22,7 @@ const Herosection = () => {
                 Apex Heroic Academy
               </div>
               <div className="text-faded text-xs md:text-base text-center mt-4 md:text-left">
-                a scifi superhero school project
+                #AHA_AU | Drawing Hashtag
               </div>
             </div>
           </div>

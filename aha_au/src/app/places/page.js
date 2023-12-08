@@ -267,102 +267,103 @@ export default function Page() {
 
   return (
     <main className="bg-secondary-400 text-white w-full min-h-screen relative overflow-hidden">
-      <div className="absolute left-[-200px] top-[-200px]">
-        <GreenBlur />
-      </div>
-      <div className="absolute right-[-200px] top-[500px]">
-        <GreenBlur />
-      </div>
-      <Navbar />
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute left-[-200px] top-[-200px]">
+          <GreenBlur />
+        </div>
+        <div className="absolute right-[-200px] top-[500px]">
+          <GreenBlur />
+        </div>
+        <Navbar />
 
-      <div className={kanit.className}>
-        <div className="pt-24 container mx-auto px-4 md:pb-0 pb-56">
-          <nav>
-            {/* mobile */}
-            <div className="md:hidden">
-              <div className="fixed bottom-0 w-full z-20">
-                <div className="bg-whitesecondary-200 backdrop-blur-sm px-4 pb-10 border-t-[0.1px] border-slate-100/20">
-                  <div className="flex items-center container ">
-                    {navigate.map((navigate) => (
-                      <div
-                        key={navigate.tag}
-                        onClick={() => handleClick(navigate.tag)}
-                        className="py-8 flex-auto cursor-pointer"
-                      >
-                        <div className="flex justify-center">
-                          <div className="w-min">{navigate.icon}</div>
+        <div className={kanit.className}>
+          <div className="pt-24 container mx-auto px-4 md:pb-0 pb-56">
+            <nav>
+              {/* mobile */}
+              <div className="md:hidden">
+                <div className="fixed bottom-0 w-full z-20">
+                  <div className="bg-whitesecondary-200 backdrop-blur-sm px-4 pb-10 border-t-[0.1px] border-slate-100/20">
+                    <div className="flex items-center container ">
+                      {navigate.map((navigate) => (
+                        <div
+                          key={navigate.tag}
+                          onClick={() => handleClick(navigate.tag)}
+                          className="py-8 flex-auto cursor-pointer"
+                        >
+                          <div className="flex justify-center">
+                            <div className="w-min">{navigate.icon}</div>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="hidden md:flex flex-col gap-4">
-              <div className="flex justify-center space-x-4">
-                {navigate.map((navigate) => (
-                  <div
-                    key={navigate.tag}
-                    onClick={() => handleClick(navigate.tag)}
-                    className={`${
-                      current === navigate.tag
-                        ? "text-white border-primary font-normal"
-                        : "text-faded border-faded font-light hover:text-primary"
-                    }  border w-fit py-1 px-8 rounded-full cursor-pointer text-sm`}
-                  >
-                    {navigate.label}
-                  </div>
-                ))}
-              </div>
-
-              {/* description */}
-              <div className="text-faded text-xs font-light mx-auto md:px-40  text-center">
-                {navigate.find((item) => item.tag === current).detail}
-              </div>
-            </div>
-          </nav>
-
-          {/* mobile label */}
-          <div className="md:hidden">
-            <Labelmobile
-              icon={navigate.find((item) => item.tag === current).iconLabel}
-              label={navigate.find((item) => item.tag === current).label}
-            />
-            <div>
-            <div className="text-faded text-xs font-light mx-auto md:px-40  text-center">
-                {navigate.find((item) => item.tag === current).detail}
-              </div>
-            </div>
-          </div>
-
-          {/* content */}
-          <div className="grid md:grid-cols-2 gap-4 pt-12">
-            {filterplace.map((filterplace) => (
-              <div
-                key={filterplace.label}
-                className="h-full bg-darklight-400 w-full py-4 px-6 rounded-2xl backdrop-blur-sm"
-              >
-                <div className="flex flex-col gap-3">
-                  <div className="flex gap-4">
-                    <div className="flex flex-col md:text-xl tracking-wider">
-                      <div>{filterplace.label}</div>
+                      ))}
                     </div>
                   </div>
-                  <div className="text-white text-xs font-extralight">
-                    {filterplace.detail}
-                  </div>
                 </div>
               </div>
-            ))}
+
+              <div className="hidden md:flex flex-col gap-4">
+                <div className="flex justify-center space-x-4">
+                  {navigate.map((navigate) => (
+                    <div
+                      key={navigate.tag}
+                      onClick={() => handleClick(navigate.tag)}
+                      className={`${
+                        current === navigate.tag
+                          ? "text-white border-primary font-normal"
+                          : "text-faded border-faded font-light hover:text-primary"
+                      }  border w-fit py-1 px-8 rounded-full cursor-pointer text-sm`}
+                    >
+                      {navigate.label}
+                    </div>
+                  ))}
+                </div>
+
+                {/* description */}
+                <div className="text-faded text-xs font-light mx-auto md:px-40  text-center">
+                  {navigate.find((item) => item.tag === current).detail}
+                </div>
+              </div>
+            </nav>
+
+            {/* mobile label */}
+            <div className="md:hidden">
+              <Labelmobile
+                icon={navigate.find((item) => item.tag === current).iconLabel}
+                label={navigate.find((item) => item.tag === current).label}
+              />
+              <div>
+                <div className="text-faded text-xs font-light mx-auto md:px-40  text-center">
+                  {navigate.find((item) => item.tag === current).detail}
+                </div>
+              </div>
+            </div>
+
+            {/* content */}
+            <div className="grid md:grid-cols-2 gap-4 pt-12">
+              {filterplace.map((filterplace) => (
+                <div
+                  key={filterplace.label}
+                  className="h-full bg-darklight-400 w-full py-4 px-6 rounded-2xl backdrop-blur-sm"
+                >
+                  <div className="flex flex-col gap-3">
+                    <div className="flex gap-4">
+                      <div className="flex flex-col md:text-xl tracking-wider">
+                        <div>{filterplace.label}</div>
+                      </div>
+                    </div>
+                    <div className="text-white text-xs font-extralight">
+                      {filterplace.detail}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-<div className="hidden md:block">
- <Footer />
-</div>
-     
+        <div className="hidden md:block">
+          <Footer />
+        </div>
+      </div>
     </main>
   );
 }

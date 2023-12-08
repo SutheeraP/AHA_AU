@@ -7,7 +7,7 @@ function Rulescontent({label, data}) {
         <div className="md:px-40 px-4 py-4 text-lg">{label}</div>
         
       </div>
-      <div  className="md:px-40 px-4 py-4 text-xs font-light mb-32">
+      <div  className="md:px-40 px-4 py-4 text-xs md:text-sm font-light mb-32">
             <ol className="list-decimal pl-4">
                 {data.map((item) => (
                     <li key={item} className="py-2">{item}</li>
