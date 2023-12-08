@@ -15,7 +15,7 @@ const Herosection = () => {
                 loading="lazy"
                 className="absolute z-0"
               />
-              <Image src="/logo.svg" width={400} height={50} />
+              <Image src="/logo.svg" width={400} height={50} className="relative z-10" />
             </div>
             <div className="my-auto">
               <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-center md:text-left">
