@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Apex Heroic Academy',
-  description: 'Drawing hashtag project',
+  description: '#AHA_AU | Drawing Hashtag Project',
 }
 
 export default function RootLayout({ children }) {
