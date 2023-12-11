@@ -24,7 +24,7 @@ export default function page() {
       <div className="grid md:grid-cols-2 gap-20 md:gap-8">
         <div className="md:bg-darklight-200 md:p-8 rounded-[1rem]">
           <div className="flex justify-center">
-            <div className="text-primary border-primary border w-fit text-center px-12 font-normal rounded-full mb-4">
+            <div className="border-primary border-b w-fit text-left md:text-center font-normal mb-8">
               วิธีเล่น
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function page() {
 
         <div className="md:bg-darklight-200 md:p-8 rounded-[1rem]">
           <div className="flex justify-center">
-            <div className="text-primary border-primary border w-fit text-center px-12 font-normal rounded-full mb-4">
+            <div className="border-primary border-b w-fit text-left md:text-center font-normal mb-8">
               ข้อตกลง
             </div>
           </div>
