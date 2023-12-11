@@ -6,6 +6,7 @@ import Image from "next/image";
 import Footer from "../component/Footer";
 
 import { Kanit } from "@next/font/google";
+import StarsCanvas from "../component/StarComponent";
 const kanit = Kanit({
   subsets: ["latin", "thai"],
   weight: ["300", "400", "600", "700"],
@@ -31,6 +32,7 @@ export default function page() {
   ];
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
+      <StarsCanvas/>
       <div className="max-w-screen-xl mx-auto relative">
         <div className="absolute left-[-200px] top-[-200px] z-0">
           <GreenBlur />
@@ -43,10 +45,10 @@ export default function page() {
         <div className={kanit.className}>
           <div className="min-h-screen flex container mx-auto px-4 relative z-10">
             <div className="my-auto w-full">
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-3 gap-4 md:gap-16">
                 {joinnav.map((item) => (
                   <Link key={item.label} href={item.path}>
-                    <div className="bg-darklight-400 flex md:flex-col gap-4 rounded-2xl md:aspect-square h-full">
+                    <div className="bg-darklight-400 md:bg-transparent md:border border-faded flex md:flex-col gap-4 rounded-2xl md:aspect-square h-full">
                       <div className="my-auto">
                         <div className="flex md:flex-col px-4 gap-4 py-4">
                           <Image
