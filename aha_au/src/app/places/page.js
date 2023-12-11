@@ -268,7 +268,7 @@ export default function Page() {
   return (
     <main className="bg-secondary-400 text-white w-full min-h-screen relative overflow-hidden">
       <div className="max-w-screen-xl mx-auto relative">
-        <div className="absolute left-[-200px] top-[-200px]">
+        <div className="absolute left-[-200px] top-[-200px] z-0">
           <GreenBlur />
         </div>
         <div className="absolute right-[-200px] top-[500px]">
@@ -277,7 +277,7 @@ export default function Page() {
         <Navbar />
 
         <div className={kanit.className}>
-          <div className="pt-24 container mx-auto px-4 md:pb-0 pb-56">
+          <div className="pt-24 container mx-auto px-4 md:pb-0 pb-56 relative z-10">
             <nav>
               {/* mobile */}
               <div className="md:hidden">

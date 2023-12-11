@@ -7,7 +7,7 @@ const Shopsection = () => {
       <div className="flex flex-col min-h-screen py-20 position relative">
         <div className="my-auto relative w-full">
           <div className="w-40 h-40 md:w-80 md:h-80 border border-[#fff6] rounded-full absolute top-[80%] md:top-[50%] left-[65%]"></div>
-          <div className="md:w-4/5">
+          <div className="md:w-3/5 lg:w-4/5">
             <div className="text-lg md:text-2xl font-semibold border-b border-faded w-fit pb-5 mb-5 tracking-wider md:tracking-widest">
               ร้านค้าปริศนา
             </div>

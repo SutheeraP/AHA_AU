@@ -45,7 +45,7 @@ export default function page() {
   const content = (
     <>
       <Labelmobile icon="/lecture.svg" label='วิชาทฤษฎี'/>
-      <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
+      <div className="grid md:grid-cols-2 gap-4 md:pb-0">
         {classContent.map((classContent) => (
           <Classcard
             key={classContent.en}
@@ -55,7 +55,9 @@ export default function page() {
             detail={classContent.detail}
           ></Classcard>
         ))}
+       
       </div>
+       <div className="text-xs text-faded text-center py-16">วิชาที่กล่าวถึงเป็นเพียงตัวอย่างเท่านั้น ผู้เล่นสามารถอ้างอิงถึงวิชาอื่นได้</div>
     </>
   );
 

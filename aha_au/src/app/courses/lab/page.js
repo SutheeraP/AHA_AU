@@ -58,15 +58,15 @@ export default function page() {
       icon: "/sample-class.svg",
     },
     {
-      th: "วิชาภาคสนาม",
-      en: "Field study",
-      detail: fieldDetail,
-      icon: "/sample-class.svg",
-    },
-    {
       th: "วิชาฝึกซ้อมการใช้อาวุธ",
       en: "Weapon training",
       detail: "ไม่ว่าจะเป็นอาวุธประจำกาย หรืออาวุธทางเทคโนโลยีที่ช่วยให้เหล่าฮีโร่แข็งแกร่งมากยิ่งขึ้น หลักสูตรของ Apex Heroic Academy ก็พร้อมจะฝึกฝนให้เหล่านักเรียนเตรียมพร้อมกับสถานการณ์ทุกรูปแบบ อย่างไรก็ตามอาวุธของซุปเปอร์ฮีโร่แต่ละคนย่อมมีความหลากหลาย คุณครูและผู้ฝึกสอนจึงต้องมีความเชี่ยวชาญและระมัดระวังมากเป็นพิเศษ",
+      icon: "/sample-class.svg",
+    },
+    {
+      th: "วิชาภาคสนาม",
+      en: "Field study",
+      detail: fieldDetail,
       icon: "/sample-class.svg",
     },
   ];
@@ -85,6 +85,7 @@ export default function page() {
         ></Classcard>
       ))}
     </div>
+    <div className="text-xs text-faded text-center py-16">วิชาที่กล่าวถึงเป็นเพียงตัวอย่างเท่านั้น ผู้เล่นสามารถอ้างอิงถึงวิชาอื่นได้</div>
     </>
   );
 

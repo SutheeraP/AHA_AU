@@ -39,7 +39,7 @@ export default function page() {
     },
     {
       label: "สิ่งมีชีวิตจากต่างดาว",
-      info: "กลุ่มคนเหล่านี้ถูกนิยามจนติดปากว่า ‘เอเลี่ยน’ โดยทั่วไปหมายถึงสิ่งมีชีวิตนอกโลกหรือสิ่งมีชีวิตที่กำเนิดจากตำแหน่งนอกโลก สามารถอ้างอิงจากดวงดาวที่ปรากฎอยู่จริง หรือจะสมมุตชื่อจักรวาล ดวงดาว หรือสถานที่นอกโลกต่างๆขึ้นเองได้ สตอรี่การลงมาเยือนบนโลกมนุษย์ไม่บังคับว่าจะต้องมาตั้งแต่สมัยไหน หรือวิธีการเป็นอย่างไร",
+      info: "กลุ่มคนเหล่านี้ถูกนิยามจนติดปากว่า ‘เอเลี่ยน’ โดยทั่วไปหมายถึงสิ่งมีชีวิตจากนอกโลก สามารถอ้างอิงจากดวงดาวที่ปรากฎอยู่จริง หรือจะสมมุติชื่อจักรวาล ดวงดาว หรือสถานที่นอกโลกต่าง ๆ ขึ้นเองได้ สตอรี่การลงมาเยือนบนโลกมนุษย์ไม่บังคับว่าจะต้องมาตั้งแต่สมัยไหน หรือวิธีการเป็นอย่างไร",
       path: "/species/alien",
       img: "",
       islink: false,
@@ -49,16 +49,16 @@ export default function page() {
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
       <div className="max-w-screen-xl mx-auto relative">
-        <div className="absolute left-[-200px] top-[-200px]">
+        <div className="absolute left-[-200px] top-[-200px] z-0">
           <GreenBlur />
         </div>
-        <div className="absolute right-[-200px] top-[200px]">
+        <div className="absolute right-[-200px] top-[200px] z-0">
           <GreenBlur />
         </div>
         <Navbar />
 
         <div className={kanit.className}>
-          <div className="container mx-auto px-4 text-xs md:text-sm font-light text-center">
+          <div className="container mx-auto px-4 text-xs md:text-sm font-light text-center relative z-10">
             <div className="flex min-h-screen">
               <div className="m-auto flex flex-col gap-48">
                 <div className="flex justify-center">
@@ -109,7 +109,7 @@ export default function page() {
               ))}
             </div>
 
-            <div className="mt-48 flex flex-col gap-4 text-start font-normal">
+            <div className="mt-48 flex flex-col gap-4 text-start">
               <Cardtoggle
                 icon="./sample-class.svg"
                 label="การเป็นลูกผสมระหว่างเผ่าพันธุ์"

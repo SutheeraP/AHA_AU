@@ -115,7 +115,7 @@ export default function page() {
     <div className="xl:w-3/5 pl-4">
       <ol className="list-decimal text-xs md:text-sm font-thin">
         {rule.map((item) => (
-          <li key={item.id} className="pb-2">
+          <li key={item.id} className="pb-3">
             {item.content}
           </li>
         ))}

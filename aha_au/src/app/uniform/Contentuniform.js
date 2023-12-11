@@ -50,7 +50,7 @@ const Contentuniform = () => {
           </div>
           <div className="">
             ในด้านการแต่งกายจะใช้สีเขียวเข้มและสีดำเป็นสีหลัก
-            โดยนักเรียนสามารถปรับแต่งเครื่องแต่งกายตามตัวตนได้{" "}
+            โดยนักเรียนสามารถปรับแต่งเครื่องแต่งกาย character ได้{" "}
             <span className="underline underline-offset-2">
               แต่ต้องอยู่ในธีมสีที่กำหนด และเหมาะกับสถานศึกษา
             </span>
@@ -110,14 +110,14 @@ const Contentuniform = () => {
       id: 7,
       label: "LETTERMAN JACKET",
       subhead: "front",
-      detail: "",
+      detail: "สามารถปักตกแต่งได้ตามใจชอบ",
       img: "bg-[url('../../public/04_jacket-front.png')]",
     },
     {
       id: 8,
       label: "LETTERMAN JACKET",
       subhead: "back",
-      detail: "",
+      detail: "สามารถปักตกแต่งได้ตามใจชอบ",
       img: "bg-[url('../../public/05_jacket-back.png')]",
     },
     {

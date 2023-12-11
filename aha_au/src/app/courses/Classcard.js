@@ -22,7 +22,7 @@ const Classcard = ({ th, en, detail, icon }) => {
             </div>
           </div>
           <div className="w-full h-[1px] bg-faded"></div>
-          <div className="text-white text-xs font-extralight">{detail}</div>
+          <div className="text-white text-xs font-light tracking-wide">{detail}</div>
         </div>
       </div>
     </div>
