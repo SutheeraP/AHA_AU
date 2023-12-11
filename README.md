@@ -7,4 +7,13 @@ Apex Heroic Academy is an open project inviting everyone to join the adventure t
 
 # Developers
 The team behind this project consists of me and my friends, who prefer to remain anonymous. I take on the role of developing the entire website. This has allowed me to enhance my web design skills using Figma and implement the website using Next.js and TailwindCSS. Throughout this project, I've become more proficient in my work. It's been an exciting journey, and Fun !
+<br>
+<br>
+<br>
+
+
+# Check out
+https://apexheroic.vercel.app/ <br>
+Twitter #AHA_AU <br>
+Facebook #AHA_AU
 
