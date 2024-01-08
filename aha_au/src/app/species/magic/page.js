@@ -3,12 +3,23 @@ import Navbar from "@/app/component/Navbar";
 import GreenBlur from "@/app/component/GreenBlur";
 import BackContent from "@/app/component/BackContent";
 import Footer from "@/app/component/Footer";
+import Image from "next/image";
 
 export default function page() {
   const thiscontent = (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <div className="col-span-2"></div>
+        <div className="col-span-2">
+        <Image
+          alt="greenblur"
+          src="/spe_wolf.png"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          className="relative"
+        />
+        </div>
         <div className="col-span-3 flex flex-col gap-6 font-light text-xs md:text-sm">
           <div>
             สัตว์มีชีวิตเวทมนต์มักพบในตำนานเทพนิยาย นิทานพื้นบ้าน

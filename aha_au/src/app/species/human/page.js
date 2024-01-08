@@ -4,6 +4,7 @@ import GreenBlur from "@/app/component/GreenBlur";
 import BackContent from "@/app/component/BackContent";
 import Footer from "@/app/component/Footer";
 import Cardtoggle from "@/app/component/Cardtoggle";
+import Image from "next/image";
 
 export default function page() {
   const data = [
@@ -111,7 +112,17 @@ export default function page() {
   ];
   const thiscontent = (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-      <div className="col-span-2"></div>
+      <div className="col-span-2">
+        <Image
+          alt="greenblur"
+          src="/spe_human.png"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          className="relative"
+        />
+      </div>
       <div className="col-span-3 flex flex-col gap-6 font-light">
         <div>
           มนุษย์ถือเป็นเผ่าพันธุ์ที่ ‘อ่อนแอ’ และค่อนข้าง ‘รักสงบ’

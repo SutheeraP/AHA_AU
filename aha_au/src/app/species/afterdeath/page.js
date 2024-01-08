@@ -5,6 +5,7 @@ import Navbar from "@/app/component/Navbar";
 import GreenBlur from "@/app/component/GreenBlur";
 import BackContent from "@/app/component/BackContent";
 import Footer from "@/app/component/Footer";
+import Image from "next/image";
 
 export default function Page() {
   const [selectedID, setSelectedID] = useState(1);
@@ -68,7 +69,17 @@ export default function Page() {
   const thiscontent = (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-xs md:text-sm font-light">
-        <div className="col-span-2"></div>
+        <div className="col-span-2">
+        <Image
+          alt="greenblur"
+          src="/spe_death.png"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          className="relative"
+        />
+        </div>
         <div className="col-span-3">
           <div className="flex flex-col gap-6">
             <div>

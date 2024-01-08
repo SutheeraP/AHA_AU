@@ -17,7 +17,7 @@ export default function page() {
       label: "สิ่งมีชีวิตจากโลกมนุษย์",
       info: "มนุษย์ถือเป็นเผ่าพันธุ์ที่ ‘อ่อนแอ’ และค่อนข้าง ‘รักสงบ’ ในสายตาของสิ่งมีชีวิตอื่น แต่สำหรับมนุษย์บางกลุ่ม พวกเขาพิเศษกว่านั้นมาก คนบางกลุ่มมีพรสวรรค์ที่เรียกได้ว่าเหนือธรรมชาติ แต่สำหรับคนบางกลุ่มมันเหมือนกับคำสาปที่ทำให้พวกเขากลายเป็นตัวประหลาดมากกว่า  มนุษย์ที่ได้รับเชิญเข้าร่วม Apex Heroic Academy จะต้องมีความพิเศษทางด้านกายภาพ หรือ ทางจิตใจ บางคนอาจติดตัวมาตั้งแต่กำเนิดหรือถูกเทคโนโลยีปัจจุบันแต่งเติมเอาทีหลัง",
       path: "/species/human",
-      img: "",
+      img: "/spe_human.png",
       islink: true,
       isflip: false,
     },
@@ -25,7 +25,7 @@ export default function page() {
       label: "สิ่งมีชีวิตหลังความตาย ",
       info: "การมีอยู่ของโลกหลังความตายเป็นที่ถกเถียงกันมานานกว่าพันปี สิ่งเหล่านี้ไม่เคยได้รับการพิสูจน์จนกระทั่งประตูมิติถูกเปิดออก คนทั้งโลกจึงได้เห็นถึงความสวยงามและความโสมมของสองสถานที่ที่เคยถูกเขียนบนตำราทางศาสนานับร้อยเล่ม ‘นรก’ และ ‘สวรรค์’ ",
       path: "/species/afterdeath",
-      img: "",
+      img: "/spe_death.png",
       islink: true,
       isflip: true,
     },
@@ -33,7 +33,7 @@ export default function page() {
       label: "สิ่งมีชีวิตเวทมนต์",
       info: "สัตว์มีชีวิตเวทมนต์มักพบในตำนานเทพนิยาย นิทานพื้นบ้าน และวรรณกรรมแฟนตาซี มีพลังหรือลักษณะพิเศษเหนือธรรมชาติที่ทำให้พวกมันแตกต่างจากโลกปกติ สิ่งมีชีวิตเหล่านี้มีทั้งฝ่ายดีและฝ่ายร้าย และขึ้นชื่อในเรื่องความสามารถในการแสดงสิ่งเหนือมนุษย์",
       path: "/species/magic",
-      img: "",
+      img: "/spe_wolf.png",
       islink: true,
       isflip: false,
     },
@@ -41,7 +41,7 @@ export default function page() {
       label: "สิ่งมีชีวิตจากต่างดาว",
       info: "กลุ่มคนเหล่านี้ถูกนิยามจนติดปากว่า ‘เอเลี่ยน’ โดยทั่วไปหมายถึงสิ่งมีชีวิตจากนอกโลก สามารถอ้างอิงจากดวงดาวที่ปรากฎอยู่จริง หรือจะสมมุติชื่อจักรวาล ดวงดาว หรือสถานที่นอกโลกต่าง ๆ ขึ้นเองได้ สตอรี่การลงมาเยือนบนโลกมนุษย์ไม่บังคับว่าจะต้องมาตั้งแต่สมัยไหน หรือวิธีการเป็นอย่างไร",
       path: "/species/alien",
-      img: "",
+      img: "/spe_alien.png",
       islink: false,
       isflip: true,
     },
@@ -73,23 +73,31 @@ export default function page() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-48 md:text-left">
+            <div className="flex flex-col gap-48 md:text-left max-w-screen-lg mx-auto">
               {content.map((item) => (
                 <div key={item.label}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div
                       className={`${
                         item.isflip ? "md:order-last" : ""
-                      } flex justify-center`}
+                      } flex justify-center relative`}
                     >
                       <Image
                         alt="greenblur"
                         src="./greenblur.svg"
-                        width={200}
-                        height={200}
+                        width={300}
+                        height={300}
+                        className="relative"
+                      />
+                      <Image
+                        alt="greenblur"
+                        src={item.img}
+                        width={300}
+                        height={300}
+                        className="absolute"
                       />
                     </div>
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-8 my-auto">
                       <div className="text-lg font-semibold tracking-wider">
                         {item.label}
                       </div>
@@ -109,7 +117,7 @@ export default function page() {
               ))}
             </div>
 
-            <div className="mt-48 flex flex-col gap-4 text-start">
+            <div className="mt-48 flex flex-col gap-4 text-start max-w-screen-lg mx-auto">
               <Cardtoggle
                 icon="./sample-class.svg"
                 label="การเป็นลูกผสมระหว่างเผ่าพันธุ์"
