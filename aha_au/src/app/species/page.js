@@ -82,19 +82,18 @@ export default function page() {
                         item.isflip ? "md:order-last" : ""
                       } flex justify-center relative`}
                     >
-                      <Image
+                      {/* <Image
                         alt="greenblur"
                         src="./greenblur.svg"
                         width={300}
                         height={300}
                         className="relative"
-                      />
+                      /> */}
                       <Image
-                        alt="greenblur"
+                        alt="species"
                         src={item.img}
-                        width={300}
-                        height={300}
-                        className="absolute"
+                        width={500}
+                        height={500}
                       />
                     </div>
                     <div className="flex flex-col gap-8 my-auto">
