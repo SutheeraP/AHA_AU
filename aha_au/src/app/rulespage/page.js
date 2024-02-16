@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../component/Navbar";
-import GreenBlur from "../component/GreenBlur";
 import Ruleshero from "./Ruleshero";
 import Rulescontent from "./Rulescontent";
 
+import GreenBlur from "../component/GreenBlur";
 import { Kanit } from "@next/font/google";
 import Footer from "../component/Footer";
 const kanit = Kanit({
