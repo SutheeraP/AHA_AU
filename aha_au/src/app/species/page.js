@@ -6,6 +6,7 @@ import { Kanit } from "@next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import Cardtoggle from "../component/Cardtoggle";
+import StarsCanvas from "../component/StarComponent";
 const kanit = Kanit({
   subsets: ["latin", "thai"],
   weight: ["300", "400", "600", "700"],
@@ -48,6 +49,7 @@ export default function page() {
   ];
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
+      <StarsCanvas/>
       <div className="max-w-screen-xl mx-auto relative">
         <div className="absolute left-[-200px] top-[-200px] z-0">
           <GreenBlur />
