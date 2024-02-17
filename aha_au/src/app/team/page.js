@@ -54,7 +54,7 @@ const page = () => {
         <div className={kanit.className}>
           <div className="min-h-screen flex container mx-auto">
             <div className="w-full">
-              <div className="text-center text-3xl mt-32 mb-16">AHA TEAM</div>
+              <div className="text-center text-3xl mt-32 mb-16 tracking-widest">AHA TEAM</div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-4 max-w-3xl mx-auto">
                 {staff.map(({ name, job, img, path }) => (
                   <div key={name}>

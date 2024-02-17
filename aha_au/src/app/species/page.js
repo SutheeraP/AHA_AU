@@ -49,7 +49,7 @@ export default function page() {
   ];
   return (
     <main className="bg-secondary-400 text-white w-full relative overflow-hidden">
-      <StarsCanvas/>
+      <StarsCanvas />
       <div className="max-w-screen-xl mx-auto relative">
         <div className="absolute left-[-200px] top-[-200px] z-0">
           <GreenBlur />
@@ -139,6 +139,50 @@ export default function page() {
                     <br></br>
                     <br></br>
                     หากไม่มั่นใจว่าคาร์แรคเตอร์ของตัวเองหลุดธีมหรือไม่สามารถสอบถามได้
+                  </div>
+                }
+              />
+              <Cardtoggle
+                icon="./sample-class.svg"
+                label="เผ่าพันธุ์ที่สงวนสิทธ์ไม่ให้ลง"
+                data={
+                  <div className="">
+                    <ol className="list-decimal flex flex-col gap-4">
+                      <li >
+                        <div className="mb-4">
+                          ไม่อนุญาตให้ลงหุ่นยนต์
+                          เนื่องจากหุ่นยนต์ไม่ถือว่าเป็นสิ่งมีชีวิต
+                          แต่ถือว่าเป็นสิ่งประดิษฐ์
+                          ไม่เข้าข่ายจุดประสงค์ของโรงเรียนที่มุ่งเน้นตามหาผู้มีพลังวิเศษ
+                          อย่างไรก็ตามผู้เล่นใช้สามารถให้หุ่นยนต์, AI,
+                          เครื่องจักร,
+                          เทคโนโลยีเป็นส่วนหนึ่งของการออกแบบตัวละครได้ อาทิ
+                        </div>
+                        <ul className="list-disc mb-4">
+                          <li>Transformer ( เอเลี่ยน-หุ่นยนต์ )</li>
+                          <li>Cyborg ( มนุษย์ - หุ่นยนต์ )</li>
+                          <li>
+                            Generator Rex ( การพัฒนาของมนุษย์ - หุ่นยนต์ )
+                          </li>
+                          <li>Ben10 (เทคโนโลยีต่างดาว - มนุษย์ )</li>
+                        </ul>
+                        <div>
+                          เทคโนโลยีดังกล่าวจะต้องกลายเป็นส่วนหนึ่งของร่างกายตัวละคร
+                          ไม่แยกออกจากกัน อย่างในกรณีของ Ironman
+                          ที่สามารถใช้พลังจากการสวมชุดเพียงอย่างเดียว{" "}
+                        </div>
+                      </li>
+                      <li>
+                        ไม่อนุญาตให้ลงเผ่าพันธุ์ที่เกี่ยวข้องหรือส่อไปในทางเพศ
+                        เช่น อินคิวบัส หรือ ซัคคิวบัส
+                        รวมถึงการให้มีพลังวิเศษดังกล่าวด้วย เช่น
+                        อวัยวะเพศยืดยาว, ปล่อยพลังจากหัวนม,
+                        น้ำเชื้อล้างความทรงจำ
+                      </li>
+                    </ol>
+
+                    <br></br>
+                    <br></br>
                   </div>
                 }
               />
