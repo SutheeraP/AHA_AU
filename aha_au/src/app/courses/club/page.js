@@ -8,7 +8,7 @@ export default function page() {
   const clubToggle = [
     {
       label: "ชมรมดนตรี",
-      icon: "/sample-class.svg",
+      icon: "/club-music.svg",
       data: (
         <div>
           <ul className="list-disc ml-4">
@@ -20,7 +20,7 @@ export default function page() {
     },
     {
       label: "ชมรมกีฬา",
-      icon: "/sample-class.svg",
+      icon: "/club-sport.svg",
       data: (
         <div>
           <ul className="list-disc ml-4">
@@ -40,7 +40,7 @@ export default function page() {
     },
     {
       label: "ชมรมเกม",
-      icon: "/sample-class.svg",
+      icon: "/club-game.svg",
       data: (
         <div>
           <ul className="list-disc ml-4">
@@ -56,27 +56,27 @@ export default function page() {
   const clubList = [
     {
       label: "ชมรมศิลปะและงานฝีมือ",
-      icon: "/sample-class.svg",
+      icon: "/club-art.svg",
     },
     {
       label: "ชมรมธรรมชาติและสิ่งแวดล้อม",
-      icon: "/sample-class.svg",
+      icon: "/club-nature.svg",
     },
     {
       label: "ชมรมการสร้างหุ่นยนต์และนวัตกรรม",
-      icon: "/sample-class.svg",
+      icon: "/club-robot.svg",
     },
     {
       label: "ชมรมวิทยาศาสตร์และอวกาศ",
-      icon: "/sample-class.svg",
+      icon: "/club-science.svg",
     },
     {
       label: "ชมรมทำอาหาร",
-      icon: "/sample-class.svg",
+      icon: "/club-food.svg",
     },
     {
       label: "ชมรมโหราศาสตร์ ",
-      icon: "/sample-class.svg",
+      icon: "/club-star.svg",
     },
   ];
 

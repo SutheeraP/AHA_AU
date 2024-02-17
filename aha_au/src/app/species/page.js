@@ -120,12 +120,12 @@ export default function page() {
 
             <div className="mt-48 flex flex-col gap-4 text-start max-w-screen-lg mx-auto">
               <Cardtoggle
-                icon="./sample-class.svg"
+                icon="/spe-human.svg"
                 label="การเป็นลูกผสมระหว่างเผ่าพันธุ์"
                 data="อนุญาตให้ทำได้, สามารถมีรูปร่าง รวมถึงพลังวิเศษจากแต่ละเผ่าได้ ขึ้นอยู่กับการออกแบบตัวละครของผู้เล่นเอง"
               />
               <Cardtoggle
-                icon="./sample-class.svg"
+                icon="/spe-human.svg"
                 label="เผ่าพันธุ์นอกเหนือจากสี่มิติที่กล่าวมา"
                 data={
                   <div>
@@ -143,7 +143,7 @@ export default function page() {
                 }
               />
               <Cardtoggle
-                icon="./sample-class.svg"
+                icon="/spe-human.svg"
                 label="เผ่าพันธุ์ที่สงวนสิทธ์ไม่ให้ลง"
                 data={
                   <div className="">

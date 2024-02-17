@@ -3,6 +3,7 @@ import Navbar from "@/app/component/Navbar";
 import GreenBlur from "@/app/component/GreenBlur";
 import BackContent from "@/app/component/BackContent";
 import Footer from "@/app/component/Footer";
+import Image from "next/image";
 
 export default function page() {
   const thiscontent = (
@@ -32,7 +33,9 @@ export default function page() {
             Apex Heroic Academy{" "}
           </div>
         </div>
-        <div className="text-center md:col-span-2">img</div>
+        <div className="text-center md:col-span-2">
+          <Image src="/spe_human.png" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>
+        </div>
       </div>
     </div>
   );

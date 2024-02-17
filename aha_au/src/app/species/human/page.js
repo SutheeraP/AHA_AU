@@ -138,7 +138,7 @@ export default function page() {
           {data.map((item) => (
             <Cardtoggle
               key={item.id}
-              icon={item.icon}
+              icon="/spe-human.svg"
               label={item.label}
               data={item.content}
             />

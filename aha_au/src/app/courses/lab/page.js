@@ -80,7 +80,7 @@ export default function page() {
         key={classContent.en}
           th={classContent.th}
           en={classContent.en}
-          icon={classContent.icon}
+          icon="/mask.svg"
           detail={classContent.detail}
         ></Classcard>
       ))}
