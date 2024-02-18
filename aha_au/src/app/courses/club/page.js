@@ -83,6 +83,17 @@ export default function page() {
   const content = (
     <>
       <Labelmobile icon="/club.svg" label="ชมรม" />
+      <div className="flex flex-col gap-4 mb-6">
+        <div className="text-xl font-semibold tracking-wide">Clubs</div>
+        <hr />
+        <div>
+          ซุปเปอร์ฮีโร่ก็ไม่ต่างอะไรจากคนปกติ
+          พวกเขามีงานอดิเรกและความสนใจที่แตกต่างกันไป Clubs
+          จะช่วยให้นักเรียนในโรงเรียนหาเพื่อนง่ายขึ้นจากการช่วยกันจับกลุ่มทำกิจกรรมที่ชื่นชอบ
+          อนุญาตให้นักเรียนสามารถก่อตั้งชมรมขึ้นได้เอง
+          และนักเรียนสามารถเข้าร่วมได้ไม่เกิน 3 ชมรม
+        </div>
+      </div>
       <div className="grid md:grid-cols-2 gap-4 pb-24 md:pb-0">
         <div className="flex flex-col gap-4">
           {clubList.map((clubList) => (
