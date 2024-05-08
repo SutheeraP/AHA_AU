@@ -11,7 +11,7 @@ const kanit = Kanit({
 
 const Maincourse = ({ content }) => {
   return (
-    <main className="bg-secondary-400 text-white w-full min-h-screen overflow-hidden relative">
+    <main className="bg-secondary-400 text-white w-full min-h-dvh overflow-hidden relative">
       <div className="max-w-screen-xl mx-auto relative">
         <div className="absolute left-[-200px] top-[-200px]">
           <GreenBlur />

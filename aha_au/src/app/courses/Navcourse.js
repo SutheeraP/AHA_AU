@@ -115,7 +115,7 @@ const Navcourse = () => {
     <>
       {/* mobile */}
       <div className="md:hidden fixed bottom-0 w-full z-20">
-        <div className="bg-whitesecondary-200 backdrop-blur-sm px-4 pb-10 border-t-[0.1px] border-slate-100/20">
+        <div className="bg-whitesecondary-200 backdrop-blur-sm px-4 border-t-[0.1px] border-slate-100/20">
           <div className="flex items-center container ">
             {navLink.map(({ id, link, icon }) => (
               <Link key={id} href={link} className="py-8 flex-auto">
