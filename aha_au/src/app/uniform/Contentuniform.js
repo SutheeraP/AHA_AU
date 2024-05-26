@@ -129,7 +129,7 @@ const Contentuniform = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-secondary-400 py-32 w-full relative z-10">
+    <div className="min-h-screen py-32 w-full relative z-10">
       <div className="container px-4 mx-auto ">
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm md:tex-base font-light">
